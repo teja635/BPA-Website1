@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Taking the pledge</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link href = "css/bootstrap.min.css" rel = "stylesheet">
+        <link href = "css/styles.css" rel = "stylesheet">
+        <link href = "css/mySiteCSS.css" rel = "stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script>
+            function readfile(){
+                alert(document.getElementById('iframe').contentDocument.body.firstChild.inner.HTML);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <nav class = "navbar navbar-default navbar-static-top navbar-red" style="padding-left: 10px;">
+                <div class = "container-fluid">
+
+                    <div class = "navbar-brand"><font color="white"><b>No Drugs</b> <span class = "glyphicon glyphicon-ban-circle" aria-hidden = "true"></span></font></div>  
+                    <button type="button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navHeaderCollapse">
+                        Collapse
+                    </button>
+
+                  <div  id="navHeaderCollapse" class = "collapse navbar-collapse">
+                      <ul class = "nav navbar-nav navbar-right">
+                          <li class="dropdown">
+                              <a href = "#"><font color="white">Home</font> </a>
+                          </li>
+                          <li class="dropdown">
+                              <a href = "facts.html"><font color="white">Facts</font></a>
+                          </li>
+                          <li class="dropdown">
+                              <a href = "about.html"><font color="white">About</font></a>
+                          </li>
+                      </ul>
+                  </div>
+                </div>
+            </nav>  
+            <div style = "padding-left: 10px">
+                <h1>Take the pledge against drugs</h1>
+                <p>All messages will be displayed for the world to see and may be the reason someone decides to get clean or not do drugs in the first place. Thank you for all of your heartwarming support</p>
+                
+                <form action = "action_page.php" method = "POST"><fieldset><legend>Write your message here</legend>Name: <br><input type = "text" name = "firstName"><br>
+                Message: <br><input type = "text" name = "message" style="width: 300px; height: 200px"><br><br>
+                <input type = "submit" name = "Submit"></fieldset></form>
+            </div>
+            
+            
+            <fieldset style = "padding-top: 30px"><legend>Messages from supportive individuals</legend></fieldset>
+            <iframe id = 'iframe' src="test.txt" onload = 'readfile()'></iframe>
+        </div>
+    </body>
+</html>
